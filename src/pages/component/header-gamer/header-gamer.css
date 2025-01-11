@@ -1,0 +1,61 @@
+/* Header container */
+
+/* General Header Styles */
+.header-gamer {
+  background-color: #000; /* Black background */
+  width: 100vw;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e5062f; /* Red border for style */
+  position: sticky; /* Make the header sticky */
+  top: 0; /* Stick to the top of the viewport */
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+  
+  /* Home Icon */
+  .home-gamer {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 30px;
+  }
+  
+  .icon-home-gamer {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url('../../../image/logo.png') no-repeat center center;
+    background-size: cover;
+  }
+  
+  .home-gamer:hover .icon-home-gamer {
+    filter: brightness(1.5); /* Brighten on hover */
+  }
+  
+  /* Links container */
+  .links-container-gamer {
+    display: flex;
+    gap: 30px; /* Space between links */
+    padding-right: 30px;
+  }
+  
+  /* Link styles */
+  .link-gamer {
+    color: #fff; /* White text */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    text-transform: uppercase; /* Capitalize link text */
+  }
+  
+  .link-gamer:hover {
+    color: #e5062f; /* Red hover effect */
+  }
+  
+  .active-gamer {
+    font-weight: bold;
+    color: #e5062f; /* Active link is red */
+    border-bottom: 2px solid #e5062f; /* Red underline */
+  }

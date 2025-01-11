@@ -1,0 +1,63 @@
+.schedule-page-gamer {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .schedule-table-container-gamer {
+    margin-top: 150px;
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .upcoming-schedule-gamer {
+    margin-bottom: 50px;
+  }
+  
+  .history-schedule-gamer {
+    margin-bottom: 50px;
+  }
+  
+  .schedule-title-gamer {
+    color: #e5062f;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .schedule-table-gamer {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .schedule-table-gamer th,
+  .schedule-table-gamer td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .schedule-table-gamer th {
+    background-color: #111;
+    color: #e5062f;
+  }
+  
+  .schedule-table-gamer td {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .schedule-table-gamer td input {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #444;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .schedule-table-gamer td input:focus {
+    outline: none;
+    border-color: #e5062f;
+  }

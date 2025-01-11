@@ -1,0 +1,200 @@
+/* Body and General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-family: 'Geo', sans-serif;
+    color: #fff;
+}
+
+/* Game Page Container */
+.game-page-gamer {
+    padding: 20px;
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #e5062f;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Grid Container */
+.grid-container-gamer {
+    width: 70vw;
+    /* margin-left: 15vw; */
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px; /* Space between columns */
+    align-items: flex-start; /* Align items to the top of each column */
+    justify-content: space-evenly; /* Distribute the columns evenly */
+    padding: 20px; /* Padding around the grid */
+}
+
+/* Form Section */
+.form-container-gamer {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    padding: 20px;
+    border: 1px solid #e5062f;
+    border-radius: 8px;
+    width: 400px;
+    height: auto; /* Auto height to fit content */
+}
+
+.form-container-gamer h2 {
+    color: #ba181b;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+select,
+textarea {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: 1px solid #555;
+    background-color: #000;
+    color: #fff;
+}
+
+textarea {
+    height: 100px;
+    resize: none;
+}
+
+select:disabled,
+textarea:disabled {
+    background-color: #000;
+    color: #737373;
+    cursor: not-allowed;
+}
+.button-row-gamer{
+    color: #e5062f;
+}
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    /* background-color: #e5062f; */
+    /* color: #000; */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #b90324;
+}
+
+/* Game List Section */
+.game-list-container-gamer {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    border: 1px solid #e5062f;
+    border-radius: 8px;
+    padding: 20px;
+    width: 400px;
+    height: auto; 
+}
+
+.game-list-container-gamer h2 {
+    color: #e5062f;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.game-list-gamer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.game-card-gamer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    height: 40px;
+    width: 90%;
+}
+
+.game-card-gamer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.detail-gamecard-gamer {
+    display: flex;
+    justify-content: space-around;
+    gap: 4px;
+}
+
+.detail-gamecard-gamer button {
+    margin-top: 0;
+    height: 80%;
+    border-radius: 0;
+    background-color: #000;
+    color: #e5062f;
+    border: 1px solid #e5062f;
+    transition: all 0.3s ease;
+}
+
+.detail-gamecard-gamer button:hover {
+    background-color: #e5062f;
+    color: #000;
+}
+
+/* Role Options Styling */
+.role-options-container-gamer {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: #000;
+    padding: 10px;
+    border: 1px solid #737373;
+    width: 95%;
+    padding-top: 4px;
+    padding-bottom: 14px;
+}
+
+.role-options-container-gamer label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #fff;
+    
+}
+
+.role-options-container-gamer input {
+    margin-right: 5px;
+}
+
+/* Disabled Role Options */
+.role-options-container-gamer .disabled {
+    background-color: #333;
+    color: #888;
+    pointer-events: none;
+}
+

@@ -1,0 +1,105 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    font-family: "Geo", serif !important;
+  }
+  
+  /* Container for Game List Page */
+  .game-list-container {
+    width: 100vw;
+    height: 90vh;
+    background-color: #000; /* Black background */
+    color: #fff;
+    text-align: center;
+  }
+  .game-list-container h3{
+    color: #e5062f;
+  }
+
+  
+  /* Search Bar */
+  .search-bar {
+    margin: 20px auto;
+    text-align: right;
+    width: 90%;
+  }
+  
+  .search-bar input {
+    padding: 0px 10px;
+    border: 1px solid #737373;
+    background-color: #171717;
+    /* border-radius: 5px; */
+    width: 300px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  /* Game Cards */
+ /* Game Cards */
+.game-list {
+  display: flex;
+  flex-direction: row; /* Change this to "row" or "column" */
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+  .game-card {
+    position: relative; /* Make container a relative position for absolute children */
+    width: 430px;
+    height: 616px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+    border: solid 1px #737373;
+  }
+  
+  .game-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure the image covers the area */
+    filter: brightness(0.5); /* Darken the image slightly */
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  .game-card:hover img {
+    filter: brightness(1); /* Light up the image on hover */
+  }
+  
+  .game-info {
+    position: absolute; /* Place info on top of the image */
+    bottom: 20px;
+    left: 20px;
+    color: #fff; /* White text color */
+    z-index: 2; /* Ensure it’s on top */
+  }
+
+  .game-info h4{
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 4px 4px 6px rgb(0, 0, 0);
+  }
+  
+  .game-info h3 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: 4px 4px 6px rgb(0, 0, 0);
+  }
+  
+  .game-info p {
+    margin: 5px 0 0;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+    text-shadow: 4px 4px 6px rgb(0, 0, 0);
+  }
+  
+  .game-card:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+  }

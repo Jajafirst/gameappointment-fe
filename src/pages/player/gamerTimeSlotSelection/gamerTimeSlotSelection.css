@@ -1,0 +1,188 @@
+/* Page Container */
+.time-slot-page {
+  /* font-family: Arial, sans-serif; */
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+
+}
+.time-slot-container{
+  width: 834px;
+}
+
+/* Gamer Info Section */
+.gamer-info {
+  display: flex; /* Keep the image and details side by side */
+  align-items: flex-start; /* Aligns content to the top */
+  gap: 20px; /* Adds space between the image and details */
+  margin-bottom: 30px;
+}
+
+.gamer-image {
+  width: 414px;
+  height: 414px;
+  object-fit: cover;
+}
+
+.gamer-details {
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-evenly; /* Push content to top and bottom */
+  align-items: flex-start; /* Align all items to the left */
+  height: 100%; /* Ensure full height for spacing */
+  padding: 10px; /* Optional padding */
+}
+
+.gamer-name {
+  color: #e5062f; /* Red text */
+  font-size: 4rem;
+  margin: 0; /* No extra margin */
+  text-align: left; /* Aligns text to the left */
+}
+
+
+
+.gamer-description{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.gamer-details p{
+  color: #fff;
+  text-align: left;
+  margin: 3px 0 0 0;
+}
+
+
+
+/* Time Slot Title */
+.time-slot-title {
+  color: #e5062f;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Grid Layout for Time Slots */
+.time-slot-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 equal-width columns */
+  gap: 20px; /* Space between grid items */
+  justify-content: center;
+  margin: 0 auto; /* Center the grid on the page */
+  max-width: 1200px; /* Prevent it from being too wide */
+}
+
+/* Individual Time Slot */
+.time-slot {
+  /* background-color: #333; */
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.time-slot p {
+  margin: 5px 0;
+}
+
+/* Available Slot */
+.time-slot.available {
+  /* background-color: #d84343; */
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+
+.time-slot.available:hover {
+  transform: scale(1.1);
+}
+
+/* Selected Slot */
+.time-slot.selected {
+  border: 2px solid #e5062f;
+  /* background-color: #ba181b; */
+  color: #e5062f;
+}
+
+/* Unavailable Slot */
+.time-slot.unavailable {
+  background-color: #171717;
+  color: #737373;
+  cursor: not-allowed;
+}
+
+/* Confirm Button */
+.make-appointment-btn {
+  background-color: #000;
+  margin-top: 20px;
+  color: #e5062f;
+  border: 1px solid #e5062f;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.make-appointment-btn:hover {
+  transform: scale(1.01);
+}
+
+.make-appointment-btn:disabled {
+  background-color: #000;
+  cursor: not-allowed;
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears above all elements */
+}
+
+.modal-content {
+  background-color: #000; /* Dark background */
+  border: 2px solid #171717;
+  padding: 20px;
+  text-align: left;
+  color: #fff;
+  max-width: 400px;
+  width: 90%;
+  position: relative; /* Add positioning for close button */
+}
+
+.modal-content h2 {
+  color: #ba181b; /* Red for the title */
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.modal-content .btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #000; /* Red background */
+  color: #e5062f;
+  border: 1px solid #e5062f;
+  /* border-radius: 5px; */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content .btn:hover {
+  background-color: #b90324; /* Slightly darker red on hover */
+  color: #000;
+}
+

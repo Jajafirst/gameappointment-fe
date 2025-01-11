@@ -1,0 +1,143 @@
+/* Gamer Card Styling */
+.gamer-card {
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  max-width: 1200px; /* Limit max width for larger screens */
+  height: auto; /* Let the height adjust based on content */
+  background-color: #000;
+  border: 1.5px solid #171717;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin: 20px auto; /* Center the card horizontally */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  gap: 20px;
+}
+
+/* Gamer Image */
+.gamer-card-image img {
+  width: 100%; /* Full width of the container */
+  max-width: 350px; /* Limit max width */
+  height: 350px; /* Maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Info Section */
+.gamer-card-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex: 1;
+  text-align: left;
+}
+
+.gamer-card-info p {
+  text-align: left;
+}
+
+.gamer-name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #e5062f; /* Red name */
+  margin-bottom: 10px;
+}
+
+.gamer-game {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff; /* White text */
+  margin-bottom: 10px;
+}
+
+.gamer-description {
+  margin-top: 10px;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* Choose Button */
+.choose-button {
+  background-color: #000; /* Black background */
+  width: 94px;
+  height: 43px;
+  color: #e5062f; /* Red text */
+  border: 1px solid #e5062f;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-end; /* Align button to the bottom-right */
+  margin-top: auto;
+  /* margin-bottom: 120px; */
+}
+
+.choose-button:hover {
+  background-color: #e5062f;
+  color: #000;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .gamer-card {
+    flex-direction: column; /* Stack image and info vertically */
+    align-items: center; /* Center align content */
+    padding: 15px;
+  }
+
+  .gamer-card-image img {
+    width: 100%; /* Take full width */
+    max-width: none; /* Remove max width */
+    margin: 0 auto; /* Center the image */
+  }
+
+  .gamer-card-info {
+    padding: 15px;
+    text-align: center; /* Center align text for smaller screens */
+  }
+
+  .gamer-name {
+    font-size: 1.8rem;
+  }
+
+  .gamer-game {
+    font-size: 1.2rem;
+  }
+
+  .gamer-description {
+    font-size: 0.9rem;
+  }
+
+  .choose-button {
+    margin: 20px auto 0; /* Center the button */
+    align-self: center;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gamer-card {
+    padding: 10px;
+  }
+
+  .gamer-name {
+    font-size: 1.5rem;
+  }
+
+  .gamer-game {
+    font-size: 1rem;
+  }
+
+  .gamer-description {
+    font-size: 0.8rem;
+  }
+
+  .choose-button {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    margin-bottom: 3rem;
+  }
+}

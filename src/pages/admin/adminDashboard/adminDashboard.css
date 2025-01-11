@@ -1,0 +1,112 @@
+.add-game-container-admin {
+    width: 1019px;
+    height: 870px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .add-game-title-admin {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .add-game-layout-admin {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .left-section-admin {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .right-section-admin {
+    width: 430px;
+    height: 616px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  
+  .upload-box-admin {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .input-admin,
+  .textarea-admin,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .textarea-admin {
+    height: 100px;
+    resize: none;
+  }
+  
+  .add-button-admin,
+  .submit-button-admin {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .add-button-admin:hover,
+  .submit-button-admin:hover {
+    background-color: #333;
+  }
+  
+  .dynamic-input-admin {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+  }
+  
+  .file-upload-admin input[type="file"] {
+    display: none;
+  }
+  
+  .file-upload-admin label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .file-upload-admin label:hover {
+    background-color: #333;
+  }

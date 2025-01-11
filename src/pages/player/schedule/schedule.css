@@ -1,0 +1,52 @@
+.schedule-page {
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+.schedule-table-container{
+    height: 100vw;
+    margin-top: 150px;
+    max-width: 80vw;
+    margin-left: 10vw;
+}
+
+.upcoming-schedule{
+    margin-bottom: 100px;
+}
+
+  h2 {
+    color: #e5062f;
+    text-align: left;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #444;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #111;
+    color: #e5062f;
+  }
+  
+  td input {
+    width: 80%;
+    padding: 5px;
+    border: 1px solid #444;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+  }
+  
+  td input:focus {
+    outline: none;
+    border-color: #e5062f;
+  }
