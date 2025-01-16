@@ -1,75 +1,183 @@
+/* Add Game Container */
 .add-game-container-admin {
-    width: 90vw;
-    margin: 20px auto;
-    margin-top: 300px;
-    padding: 20px;
-    background-color: #111;
-    /* border-radius: 10px; */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-  
-  .add-game-title-admin {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #fff;
-    text-align: center;
-  }
-  
-  .add-game-form-admin {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .left-section-admin,
-  .right-section-admin {
-    width: 48%;
-  }
-  
-  .form-group-admin {
-    margin-bottom: 20px;
-  }
-  
-  .input-admin,
-  .textarea-admin {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  .textarea-admin {
-    height: 100px;
-    resize: none;
-  }
-  
-  .upload-box-admin {
-    border: 2px dashed #ccc;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .add-button-admin,
-  .toggle-input-button-admin,
-  .submit-button-admin {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .add-button-admin:hover,
-  .toggle-input-button-admin:hover,
-  .submit-button-admin:hover {
-    background-color: #333;
-  }
-  
-  .dynamic-input-admin {
-    display: flex;
-    gap: 10px;
-    margin-top: 10px;
-  }
+  margin: 20px auto;
+  width: 1050px;
+  margin-top: 300px;
+  padding: 20px;
+  background: #111;
+  border: 1px solid #e5062f;
+  /* border-radius: 10px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.add-game-title-admin {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Form Layout */
+.add-game-form-admin {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Input Fields */
+.input-admin {
+  width: 447px;
+  /* width: 100%; */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.textarea-admin {
+  width: 525px;
+  height: 190px;
+  padding: 10px;
+  border: 1px solid #e5062f;
+  background-color: #111;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Upload Box */
+.upload-box-admin {
+  display: flex;
+  width: 430px;
+  height: 616px;
+  flex-direction: column;
+  align-items: center;
+  border: 2px dashed #e5062f;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #888;
+}
+
+/* Buttons */
+.add-button-admin,
+.submit-button-admin,
+.cancel-button-admin {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: 1px solid #e5062f;
+  border-radius: 5px;
+  background-color: #111;
+  color: #e5062f;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-button-admin:hover,
+.submit-button-admin:hover,
+.cancel-button-admin:hover {
+  background-color: #e5062f;
+  color: #111;
+}
+
+.cancel-button-admin {
+  background-color: #111;
+  color: #e5062f;
+}
+
+.cancel-button-admin:hover {
+  background-color: #e5062f;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Modal Title */
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* Add Button in Modal */
+.add-button-admin {
+  margin-top: 15px;
+}
+
+select.input-admin{
+  width: 547px;
+}
+
+input.input-admin{
+  background-color: #111;
+  border: 1px solid #e5062f;
+}
+
+.game-detail-right-admin {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.game-image-admin {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 1px solid #e5062f;
+  border-radius: 5px;
+}
+
+.image-placeholder {
+  width: 430px;
+  height: 616px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #888;
+  margin-bottom: 10px;
+  border: 1px solid #e5062f;
+  border-radius: 5px;
+}
+
+.edit-image-label-admin {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #e5062f;
+}
+
+.edit-image-input-admin {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #e5062f;
+  border-radius: 5px;
+  color: #e5062f;
+  background-color: #111;
+}
+
+.edit-image-input-admin:hover {
+  background-color: #e5062f;
+  color: #111;
+}

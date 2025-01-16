@@ -1,0 +1,186 @@
+/* General Container */
+.game-detail-container-admin {
+    margin: 20px auto;
+    margin-top: 500px;
+    width: 1050px;
+    padding: 20px;
+    background: #111;
+    border: 1px solid #e5062f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title */
+  .game-detail-title-admin {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Content */
+  .game-detail-content-admin {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  /* Left Section */
+  .rank-role-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .actions a {
+    margin-left: 10px;
+    color: #e5062f;
+    text-decoration: none;
+  }
+  
+  .actions a:hover {
+    color: #fff;
+  }
+  
+  .textarea-admin {
+    margin-top: 10px;
+  }
+  
+  /* Right Section */
+  .game-image-admin {
+    width: 430px;
+    height: 616px;
+    object-fit: cover;
+    border: 1px solid #e5062f;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Buttons */
+  .button-container-admin {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  /* Save and Remove Game Buttons */
+  .save-button-admin,
+  .remove-game-button-admin {
+    width: 100%; /* Makes both buttons full width of the parent container */
+    /*  */
+    margin: 10px auto; /* Centers the buttons */
+    padding: 10px 20px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #e5062f;
+    background-color: #111;
+    color: #e5062f;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .save-button-admin:hover,
+  .remove-game-button-admin:hover {
+    background-color: #e5062f;
+    color: #111;
+  }
+  
+  .remove-game-button-admin {
+    margin-top: 20px; /* Optional: Adds spacing below the save button */
+  }
+  
+  /* Dropdown Container */
+  .dropdown-admin {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .dropdown-toggle-admin {
+    padding: 8px 12px;
+    background-color: #111;
+    color: #e5062f;
+    border: 1px solid #e5062f;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Adjust width to fill the container */
+    text-align: left;
+  }
+  
+  .dropdown-toggle-admin:hover {
+    background-color: #e5062f;
+    color: #111;
+  }
+  
+  .dropdown-content-admin {
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    border: 1px solid #e5062f;
+    padding: 10px;
+    z-index: 1000;
+    margin-top: 5px; /* Spacing from the toggle button */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    max-height: 200px; /* Add a max height to prevent overflow */
+    overflow-y: auto; /* Enable scrolling if content exceeds max height */
+  }
+  
+  .dropdown-item-admin {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    align-items: center;
+  }
+  
+  .dropdown-item-admin span {
+    flex: 1; /* Allow the text to take up the necessary space */
+    color: #fff;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .edit-link-admin,
+  .remove-link-admin {
+    color: #e5062f;
+    text-decoration: none;
+    margin-left: 3px;
+  }
+  
+  .edit-link-admin:hover,
+  .remove-link-admin:hover {
+    text-decoration: underline;
+  }
+
+ /* Add Rank Section Alignment */
+.add-rank-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.add-rank-input {
+  flex: 2; /* Adjusts the width of the input field */
+  /* padding: 10px; */
+  border: 1px solid #e5062f;
+  background-color: #111;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 0;
+  margin-right: 10px; /* Space between input and button */
+}
+
+.add-rank-button {
+  flex: 1; /* Adjusts the width of the button */
+  padding: 10px;
+  border: 1px solid #e5062f;
+  background-color: #111;
+  color: #e5062f;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+}
+
+.add-rank-button:hover {
+  background-color: #e5062f;
+  color: #111;
+}

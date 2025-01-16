@@ -17,7 +17,7 @@ const AdminDashboard = () => {
 
       <div className="admin-dashboard">
         {/* Summary Section */}
-        <h1 className="section-title">Overall Number</h1>
+        <h1 className="section-title" id="OverallNumbers">Overall Numbers</h1>
         <div className="summary-section-gamer">
           <div className="card-gamer">Total Players: {constraintsData.players.length}</div>
           <div className="card-gamer">Total Gamers: {constraintsData.gamers.length}</div>
@@ -115,6 +115,7 @@ const AdminDashboard = () => {
           )}
 
           {/* Time Slots */}
+          <h1>Overall Time</h1>
           {constraintsData.timeSlots.length > 0 && (
             <div className="table-section-gamer" id="AllAvailableTimeSlot">
               <h2>All Available Time Slot</h2>

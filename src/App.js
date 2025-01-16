@@ -10,6 +10,7 @@ import AddTimeSlotGamer from "./pages/gamer/addTimeSlotGamer/addTimeSlotGamer"; 
 import ScheduleGamer from './pages/gamer/scheduleGamer/scheduleGamer';
 import AdminDashboard from './pages/admin/adminDashboard/adminDashboard'; // Add this import
 import AdminAddGame from './pages/admin/addGameAdmin/addGameAdmin'
+import GameDetailAdmin from './pages/admin/gameDetailAdmin/gameDetailAdmin'
 
 
 
@@ -34,6 +35,7 @@ const App = () => {
         {/* Admin Route */}
         <Route path="/adminDashboard" element={<AdminDashboard />} />
         <Route path="/adminAddGame" element={<AdminAddGame />} /> {/* Add this route */}
+        <Route path="/gameDetailAdmin" element={<GameDetailAdmin />} />
         {/* Add other routes here */}
       </Routes>
     </Router>

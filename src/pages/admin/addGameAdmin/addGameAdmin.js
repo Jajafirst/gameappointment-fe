@@ -1,59 +1,49 @@
 import React, { useState } from "react";
-import HeaderAdmin from "../../component/header-admin/header-admin";
+import HeaderAdmin from "../../component/header-admin/header-admin"; // Ensure the path is correct
 import "./addGameAdmin.css";
 
 const AddGameAdmin = () => {
   const [gameName, setGameName] = useState("");
   const [rank, setRank] = useState("");
   const [role, setRole] = useState("");
-  const [ranks, setRanks] = useState(["Iron"]); // Default rank
-  const [roles, setRoles] = useState(["Duelist"]); // Default role
+  const [ranks, setRanks] = useState(["Iron"]);
+  const [roles, setRoles] = useState(["Duelist"]);
   const [description, setDescription] = useState("");
-  const [gamePic, setGamePic] = useState(null);
+  const [gamePic, setGamePic] = useState(null); // Store the uploaded image preview
 
-  const handleAddRank = () => {
-    if (rank.trim() && !ranks.includes(rank.trim())) {
-      setRanks([...ranks, rank.trim()]);
-      setRank("");
-    } else {
-      alert("Please enter a valid rank or avoid duplicates!");
+  // Handle Image Upload
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        setGamePic(reader.result); // Set the image preview
+      };
+      reader.readAsDataURL(file);
     }
   };
 
-  const handleAddRole = () => {
-    if (role.trim() && !roles.includes(role.trim())) {
-      setRoles([...roles, role.trim()]);
-      setRole("");
-    } else {
-      alert("Please enter a valid role or avoid duplicates!");
-    }
-  };
-
-  const handleFileChange = (e) => {
-    setGamePic(e.target.files[0]);
-  };
-
-  const handleSubmit = () => {
-    const gameData = {
-      gameName,
+  const handleAddGame = () => {
+    const newGame = {
+      name: gameName,
+      description,
       ranks,
       roles,
-      description,
-      gamePic: gamePic?.name || "No file chosen",
+      image: gamePic,
     };
-    console.log("Game Data Submitted:", gameData);
-    alert("Game Added Successfully!");
+
+    console.log("Added Game:", newGame); // Log for debugging or saving the game
+    alert("Game added successfully!");
   };
 
   return (
-    <div className="add-game-container-admin">
+    <>
       <HeaderAdmin />
-      <h1 className="add-game-title-admin">Add Game</h1>
-      <div className="add-game-layout-admin">
-        {/* Left Section */}
-        <div className="left-section-admin">
-          {/* Game Name */}
-          <div className="form-group-admin">
+      <div className="add-game-container-admin">
+        <h1 className="add-game-title-admin">Add Game</h1>
+        <div className="add-game-form-admin">
+          {/* Left Section */}
+          <div className="add-game-left-admin">
             <label>Game</label>
             <input
               type="text"
@@ -62,40 +52,44 @@ const AddGameAdmin = () => {
               placeholder="Enter game name"
               className="input-admin"
             />
-          </div>
 
-          {/* Rank Section */}
-          <div className="form-group-admin">
+            {/* Rank Section */}
             <label>Rank</label>
             <select className="input-admin">
-              {ranks.map((rank, index) => (
-                <option key={index} value={rank}>
-                  {rank}
+              {ranks.map((r, index) => (
+                <option key={index} value={r}>
+                  {r}
                 </option>
               ))}
             </select>
-            <button className="add-button-admin" onClick={handleAddRank}>
+            <button
+              className="add-button-admin"
+              onClick={() =>
+                setRanks((prevRanks) => [...prevRanks, rank.trim()])
+              }
+            >
               Add Rank
             </button>
-          </div>
 
-          {/* Role Section */}
-          <div className="form-group-admin">
+            {/* Role Section */}
             <label>Role</label>
             <select className="input-admin">
-              {roles.map((role, index) => (
-                <option key={index} value={role}>
-                  {role}
+              {roles.map((r, index) => (
+                <option key={index} value={r}>
+                  {r}
                 </option>
               ))}
             </select>
-            <button className="add-button-admin" onClick={handleAddRole}>
+            <button
+              className="add-button-admin"
+              onClick={() =>
+                setRoles((prevRoles) => [...prevRoles, role.trim()])
+              }
+            >
               Add Role
             </button>
-          </div>
 
-          {/* Description */}
-          <div className="form-group-admin">
+            {/* Description */}
             <label>Description of this game</label>
             <textarea
               value={description}
@@ -105,25 +99,41 @@ const AddGameAdmin = () => {
               className="textarea-admin"
             ></textarea>
           </div>
-        </div>
 
-        {/* Right Section */}
-        <div className="right-section-admin">
-          <div className="form-group-admin">
-            <label>Upload Game Pic</label>
-            <div className="upload-box-admin">
-              <input type="file" className="input-admin" onChange={handleFileChange} />
-              {gamePic && <p>Selected File: {gamePic.name}</p>}
-            </div>
+          {/* Right Section */}
+          {/* Right Section */}
+          <div className="game-detail-right-admin">
+            {gamePic ? (
+              <img
+                src={gamePic}
+                alt={`${gameName || "Game"} cover`}
+                className="game-image-admin"
+              />
+            ) : (
+              <div className="image-placeholder">Game Cover Preview</div>
+            )}
+            <label className="edit-image-label-admin">Edit Image</label>
+            <input
+              type="file"
+              className="edit-image-input-admin"
+              onChange={(e) => {
+                const file = e.target.files[0];
+                if (file) {
+                  const reader = new FileReader();
+                  reader.onload = () => {
+                    setGamePic(reader.result); // Update gamePic with the uploaded image
+                  };
+                  reader.readAsDataURL(file);
+                }
+              }}
+            />
           </div>
         </div>
+        <button className="submit-button-admin" onClick={handleAddGame}>
+          Add Game
+        </button>
       </div>
-
-      {/* Bottom Section */}
-      <button className="submit-button-admin" onClick={handleSubmit}>
-        Add Game
-      </button>
-    </div>
+    </>
   );
 };
 

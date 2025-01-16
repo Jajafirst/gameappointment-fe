@@ -55,6 +55,13 @@ export const constraintsData = {
         Email: "Tenz@gmail.com",
         "Date Registered": "20-11-2024",
       },
+      {
+        Gamer_ID: "G12345",
+        Profile_Pic: "Link.jpeg",
+        Username: "Tenz",
+        Email: "Tenz@gmail.com",
+        "Date Registered": "20-11-2024",
+      },
     ],
     games: [
       {

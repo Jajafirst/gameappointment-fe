@@ -1,62 +1,94 @@
 /* Header Container */
 .header-admin {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #111; /* Dark background */
-    color: #fff; /* White text */
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-  }
-  
-  /* Menu Icon */
-  .menu-icon-admin {
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  /* Slide-Out Menu */
-  .menu-admin {
-    position: fixed;
-    top: 0;
-    left: -250px; /* Hidden initially */
-    width: 250px;
-    height: 100%;
-    background-color: #000; /* Dark background */
-    color: #fff; /* White text */
-    transition: left 0.3s ease-in-out;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
-    z-index: 1001; /* Above header */
-  }
-  
-  /* Opened Menu */
-  .menu-admin.open {
-    left: 0; /* Slide into view */
-  }
-  
-  /* Menu Items */
-  .menu-admin ul {
-    list-style: none;
-    padding: 20px;
-    margin: 0;
-  }
-  
-  .menu-admin ul li {
-    margin-bottom: 20px;
-  }
-  
-  .menu-admin ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    transition: color 0.3s ease;
-  }
-  
-  .menu-admin ul li a:hover {
-    color: #e5062f; /* Highlight color */
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #111; /* Dark background */
+  color: #fff; /* White text */
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Menu Icon */
+.menu-icon-admin {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Slide-Out Menu */
+.menu-admin {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Hidden initially */
+  width: 250px;
+  height: 100%;
+  background-color: #000; /* Dark background */
+  color: #fff; /* White text */
+  transition: left 0.3s ease-in-out;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  z-index: 1001; /* Above header */
+}
+
+/* Opened Menu */
+.menu-admin.open {
+  left: 0; /* Slide into view */
+}
+
+/* Menu Items */
+.menu-admin ul {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+}
+
+.menu-admin ul li {
+  margin-bottom: 20px;
+}
+
+.menu-admin ul li button,
+.menu-admin ul li a {
+  text-decoration: none;
+  color: #fff; /* Text color */
+  font-size: 18px;
+  background: none;
+  border: none;
+  padding: 0; /* Remove padding */
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-align: left; /* Align text to the left */
+}
+
+.menu-admin ul li button:hover,
+.menu-admin ul li a:hover {
+  color: #e5062f; /* Highlight color */
+}
+
+/* Dropdown Menu */
+.dropdown-menu-admin {
+  margin-top: 10px;
+}
+
+.dropdown-menu-admin li {
+  margin-bottom: 10px;
+}
+
+.dropdown-menu-admin li button {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  background: none;
+  border: none;
+  padding: 0; /* Remove padding */
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-align: left; /* Align dropdown text to the left */
+}
+
+.dropdown-menu-admin li button:hover {
+  color: #e5062f; /* Highlight color */
+}

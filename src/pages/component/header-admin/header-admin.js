@@ -1,16 +1,32 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import { useNavigate } from "react-router-dom";
 import "./header-admin.css";
 
 const HeaderAdmin = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const handleMenuItemClick = () => {
-    setIsMenuOpen(false); // Close the menu when a menu item is clicked
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleNavigation = (path, sectionId = null) => {
+    navigate(path);
+    if (sectionId) {
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 0);
+    }
+    setIsMenuOpen(false); // Close the menu
+    setIsDropdownOpen(false); // Close the dropdown
   };
 
   return (
@@ -23,36 +39,94 @@ const HeaderAdmin = () => {
       {/* Slide-Out Menu */}
       <nav className={`menu-admin ${isMenuOpen ? "open" : ""}`}>
         <ul>
+          {/* Back Link */}
+          <li className="back-link">
+            <button onClick={() => setIsMenuOpen(false)}>- Back</button>
+          </li>
+
           <li>
-            <Link to="/adminDashboard" onClick={handleMenuItemClick}>
+            <button onClick={() => handleNavigation("/adminDashboard")}>
               Home
-            </Link>
+            </button>
           </li>
-          <li>
-            <Link to="/player" onClick={handleMenuItemClick}>
-              Player
-            </Link>
+
+
+
+          {/* Dropdown Menu */}
+          <li className="dropdown-admin">
+            <button onClick={handleDropdownToggle}>
+              Admin Dashboard Menu
+            </button>
+            {isDropdownOpen && (
+              <ul className="dropdown-menu-admin">
+                <li>
+                  <button
+                    onClick={() =>
+                      handleNavigation("/adminDashboard", "OverallNumbers")
+                    }
+                  >
+                    Overall Numbers
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() =>
+                      handleNavigation("/adminDashboard", "TableOverall")
+                    }
+                  >
+                    Table Overall
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() =>
+                      handleNavigation("/adminDashboard", "PlayerList")
+                    }
+                  >
+                    Player
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() =>
+                      handleNavigation("/adminDashboard", "GamerList")
+                    }
+                  >
+                    Gamer
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() =>
+                      handleNavigation("/adminDashboard", "GameList")
+                    }
+                  >
+                    Game
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() =>
+                      handleNavigation(
+                        "/adminDashboard",
+                        "AllAvailableTimeSlot"
+                      )
+                    }
+                  >
+                    Overall Schedule
+                  </button>
+                </li>
+              </ul>
+            )}
           </li>
+
+          {/* Add Game */}
           <li>
-            <Link to="/gamer" onClick={handleMenuItemClick}>
-              Gamer
-            </Link>
-          </li>
-          <li>
-            <Link to="/game" onClick={handleMenuItemClick}>
-              Game
-            </Link>
-          </li>
-          <li>
-            <Link to="/overallSchedule" onClick={handleMenuItemClick}>
-              Overall Schedule
-            </Link>
-          </li>
-          <li>
-            <Link to="/adminAddGame" onClick={handleMenuItemClick}>
+            <button onClick={() => handleNavigation("/adminAddGame")}>
               Add Game
-            </Link>
+            </button>
           </li>
+
         </ul>
       </nav>
     </header>
